@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+<servers>
+    <server>
+        <id>anypoint-exchange-v3</id>
+        <username>~~~Client~~~</username>
+        <password>153e8b186cc14728915acb19f8fd08f9~?~7A8F1861102A4332A5774F1439f1291D</password>
+    </server>
+
+</servers>
+<profiles>
+    <profile>
+        <id>Mule</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <repositories>
+            <repository>
+                <id>MuleRepository</id>
+                <name>MuleRepository</name>
+                <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+                <layout>default</layout>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profile>
+	<profile>
+        <id>anypoint-exchange-v3</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+		<properties>
+                <mulesoft.exchange.groupid>e244ac85-ac45-4c9c-a545-d23322738180</mulesoft.exchange.groupid>
+         </properties>
+        <repositories>
+            <repository>
+                <id>anypoint-exchange-v3</id>
+                <name>anypoint-exchange-v3</name>
+                <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/e244ac85-ac45-4c9c-a545-d23322738180/maven</url>
+                <layout>default</layout>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profile>
+</profiles>   
+</settings>
