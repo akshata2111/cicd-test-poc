@@ -12,12 +12,26 @@ jobs:
     environment: dev
     
     steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven-
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "oracle"
+          java-version: 17
+      
+      
     
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Deploy to Exchange
+        run: mvn clean deploy -s settings.xml -DskipTests
     
-    - name: Deploy to Exchange
-      run: mvn clean deploy -s settings.xml -DskipTests
-    
-    - name: Deploy to Runtime
-      run: mvn clean deploy -DmuleDeploy -s -DskipTests 
+      - name: Deploy to Runtime
+        run: mvn clean deploy -DmuleDeploy -s -DskipTests 
