@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>fb304765-5a71-4b9b-bfa6-58193b4dab6b</groupId>
+	<groupId>e244ac85-ac45-4c9c-a545-d23322738180</groupId>
 	<artifactId>cicd-test-poc</artifactId>
 	<version>1.0.4</version>
 	<packaging>mule-application</packaging>
@@ -41,10 +41,10 @@
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.6.7</muleVersion>
 						<server>anypoint-exchange-v3</server>
-						<connectedAppClientId>473afb936203454a9a3ed8640c077284</connectedAppClientId>
-						<connectedAppClientSecret>4323E6572d734b6B96Bf30A235AF8c45</connectedAppClientSecret>
+						<connectedAppClientId>1089c12b16804365b156c4ed3a7d6d9d</connectedAppClientId>
+						<connectedAppClientSecret>a5E9756433804Bc0A7C1371D501c4e65</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
-						<businessGroupId>fb304765-5a71-4b9b-bfa6-58193b4dab6b</businessGroupId>
+						<businessGroupId>e244ac85-ac45-4c9c-a545-d23322738180</businessGroupId>
 						<applicationName>cicd-test-poc</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
